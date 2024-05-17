@@ -17,7 +17,7 @@ class Post(models.Model):
 
     title = models.CharField(max_length=200)
     content = models.TextField()
-    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='posts')
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='posts', null=True)
     slug = models.SlugField(max_length=200, unique=True, unique_for_date='publish')
     publish = models.DateTimeField(default=timezone.now)
     status = models.CharField(max_length=2, choices=Status.choices, default=Status.DRAFT)
