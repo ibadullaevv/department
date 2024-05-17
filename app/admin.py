@@ -29,4 +29,4 @@ class DepartmentAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content', 'author', 'date')
+    list_display = ('title', 'content', 'author')
